@@ -1,3 +1,4 @@
+![Sys arch bmshow drawio](https://github.com/user-attachments/assets/ac99780f-dc93-4910-aa17-e79244d8bcac)
 
 # Database
 ![databse 2](https://github.com/user-attachments/assets/d2d6a2cf-0526-4216-8ddd-73fb00d8a6f2)
