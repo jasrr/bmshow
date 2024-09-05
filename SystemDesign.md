@@ -74,10 +74,10 @@ Reservation and Payment Processing: Users book tickets and make payments. The sy
 ## 5.1 Data Schema
 
 User Table: user_id, username, email_address, password_hash, created_date
-Reservation Table: reservation_id, user_id, movie_id, showtime_id, number_of_tickets, reservation_status
+Reservation Table: bookingn_id, user_id, movie_id, showtime_id, number_of_tickets, booking_status
 Movie Table: movie_id, title, genre, duration, description, release_date
 Showtime Table: showtime_id, movie_id, theater_id, start_time, end_time
-Payment Table: payment_id, user_id, reservation_id, amount, payment_date, payment_status
+Payment Table: payment_id, user_id,booking_id, amount, payment_date, payment_status
 Review Table: review_id, user_id, movie_id, rating, review_text, created_date
 
 ## 5.2 Algorithms
