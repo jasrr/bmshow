@@ -6,7 +6,7 @@ This is a basic clone of the backend for BookMyShow, built with Java and Spring 
 - **Movie Listings:** Add, view, and search for movies.
 - **Showtimes Management:** Manage and view movie showtimes.
 
-## Tech Stack
+## TechStack
 
 - **Backend:** Java, Spring Boot
 - **Database:** H2 (in-memory database for development)
