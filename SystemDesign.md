@@ -13,7 +13,7 @@
 User Authentication and Management: Secure registration, login, profile management, and password recovery.
 Movie Management: CRUD operations for movies, including adding, updating, and deleting movies and showtimes.
 Showtime Management: Real-time tracking and scheduling of movie showtimes.
-Reservation System: Users can reserve tickets in advance and manage their reservations.
+Booking System: Users can reserve tickets in advance and manage their reservations.
 Payment Processing: Integration with multiple payment gateways to handle transactions securely.
 Theater Management: Manage multiple theaters and screen configurations.
 User Reviews and Ratings: Allow users to review and rate movies.
