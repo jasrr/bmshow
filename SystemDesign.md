@@ -13,7 +13,7 @@
 User Authentication and Management: Secure registration, login, profile management, and password recovery.
 Movie Management: CRUD operations for movies, including adding, updating, and deleting movies and showtimes.
 Showtime Management: Real-time tracking and scheduling of movie showtimes.
-Booking System: Users can reserve tickets in advance and manage their reservations.
+Booking System: Users can reserve tickets in advance and manage their Bookings.
 Payment Processing: Integration with multiple payment gateways to handle transactions securely.
 Theater Management: Manage multiple theaters and screen configurations.
 User Reviews and Ratings: Allow users to review and rate movies.
@@ -21,7 +21,7 @@ User Reviews and Ratings: Allow users to review and rate movies.
 ## 1.2 Non-Functional Requirements
 Latency: The system should respond to user requests within milliseconds to ensure a smooth experience.
 Data Integrity: Maintain accurate and consistent data across all system components.
-Scalability: Design the system to handle increasing numbers of users, movies, and reservations without performance degradation.
+Scalability: Design the system to handle increasing numbers of users, movies, and bookinggs without performance degradation.
 Availability: Ensure high availability with minimal downtime, targeting an uptime of 99.9%.
 Disaster Recovery: Implement backup and recovery procedures to handle data loss or system failures.
 
@@ -31,10 +31,10 @@ To estimate capacity:
 
 Monthly Traffic: 100,000 users
 Average Transactions Per Second (TPS): 0.038 transactions per user
-Reservation Assumptions: 50% reserve in advance, 25% pay without reservation
+Booking Assumptions: 50% reserve in advance, 25% pay without Bookings
 Storage Requirements:
 TPS: 50 + 25 = 75
-Storage Per Transaction: Approx. 300 KB (including user data and reservation details)
+Storage Per Transaction: Approx. 300 KB (including user data and Bookings details)
 Total Storage Needed: 75 * 300 KB = 22.5 MB per second
 Annual Storage: 22.5 MB * 60 * 60 * 24 * 365 ≈ 710 TB
 
@@ -45,7 +45,7 @@ A use case diagram provides a visual representation of interactions:
 Registered User: Can log in, reserve tickets, view booking history, write reviews, and rate movies.
 Unregistered User: Can browse movies, check showtimes, and view general information.
 Admin: Can manage movies, showtimes, theaters, and view system analytics.
-System: Handles user requests, manages reservations, processes payments, and integrates with external APIs.
+System: Handles user requests, manages Bookings, processes payments, and integrates with external APIs.
 
 # 4. Architecture of the System
 
@@ -55,44 +55,44 @@ Backend Services:
 
 Authentication Service: Manages user authentication and authorization.
 Movie Service: Handles CRUD operations for movies and showtimes.
-Reservation Service: Manages ticket reservations and availability.
+Bookings Service: Manages ticket Bookings and availability.
 Payment Service: Processes transactions and handles payment gateway integration.
 Review Service: Manages user reviews and ratings.
 Database:
 
-SQL Database: Stores structured data such as user accounts, movie details, reservations, and payments.
+SQL Database: Stores structured data such as user accounts, movie details, Bookings, and payments.
 NoSQL Database: Stores unstructured data like reviews and logs.
 
 ##4.2 System Process
 
 User Registration: Users provide personal details, which are stored securely.
 Movie and Showtime Management: Admins add, update, or remove movies and showtimes.
-Reservation and Payment Processing: Users book tickets and make payments. The system checks availability and confirms reservations.
+Bookings and Payment Processing: Users book tickets and make payments. The system checks availability and confirms Bookings.
 
 # 5. Low-Level Design (LLD)
 
 ## 5.1 Data Schema
 
 User Table: user_id, username, email_address, password_hash, created_date
-Reservation Table: bookingn_id, user_id, movie_id, showtime_id, number_of_tickets, booking_status
+Bookings Table: bookingn_id, user_id, movie_id, showtime_id, number_of_tickets, booking_status
 Movie Table: movie_id, title, genre, duration, description, release_date
 Showtime Table: showtime_id, movie_id, theater_id, start_time, end_time
 Payment Table: payment_id, user_id,booking_id, amount, payment_date, payment_status
 Review Table: review_id, user_id, movie_id, rating, review_text, created_date
 
 ## 5.2 Algorithms
-Reservation Management: Includes algorithms for availability checking, seat allocation, and confirmation.
+Bookings Management: Includes algorithms for availability checking, seat allocation, and confirmation.
 Payment Processing: Handles payment authorization, capture, and refunds.
 Review Aggregation: Aggregates and displays movie ratings and reviews.
 ## 5.3 Data Flow Diagrams
 Information Flow: Illustrates how data flows between system components, such as from user input to backend processing and database updates.
 6. High-Level Design (HLD)
 ## 6.1 System Architecture
-Presentation Layer: User interface for movie browsing, reservations, and payment processing.
-Business Logic Layer: Handles core functionalities like reservation management, movie scheduling, and payment processing.
+Presentation Layer: User interface for movie browsing, Bookings, and payment processing.
+Business Logic Layer: Handles core functionalities like Bookings management, movie scheduling, and payment processing.
 Data Layer: Manages database interactions and data storage.
 ## 6.2 Module Interaction
-Component Flow: Details interactions between modules, such as how the reservation service communicates with the payment service and database.
+Component Flow: Details interactions between modules, such as how the Bookings service communicates with the payment service and database.
 ## 6.3 User Interface Design
 Design Focus: Ensure an intuitive user experience with easy navigation, responsive design, and clear booking processes.
 ## 6.4 External Interfaces
@@ -101,7 +101,7 @@ API Integration: Integrate with external services for payment gateways, email no
 ## 7.1 Users Table
 Fields: user_id, username, email, PhoneNumber password_hash, created_date
 ## 7.2Booking Table
-Fields: reservation_id, user_id, movie_id, showtime_id, number_of_tickets, reservation_status
+Fields: Bookings_id, user_id, movie_id, showtime_id, number_of_tickets, Bookings_status
 ## 7.3 Movie Table
 Fields: movie_id, title, genre, duration, description, release_date
 ## 7.4 Showtime Table
@@ -116,8 +116,8 @@ Fields: review_id, user_id, movie_id, rating, review_text, created_date
 Functions: Handles registration, authentication, and user profile management.
 ## 8.2 Movie Management
 Functions: Manages CRUD operations for movies and showtimes.
-## 8.3 Reservation Management
-Functions: Handles reservation creation, seat allocation, and cancellation.
+## 8.3 Bookings Management
+Functions: Handles Bookings creation, seat allocation, and cancellation.
 ## 8.4 Payment Processing
 Functions: Manages payment transactions, including authorization, capture, and refunds.
 ## 8.5 Review Management
@@ -175,4 +175,4 @@ Password Management: Store passwords securely using hashing algorithms like bcry
 Payment Validation: Validate and secure payment transactions to prevent fraud.
 Audit Logs: Maintain audit logs for all financial transactions and critical operations.
 # 12. Conclusion
-This document provides a detailed and comprehensive design for the "Booky My Show" clone backend. By incorporating best practices and advanced features, the system aims to deliver a robust, scalable, and user-friendly solution for managing movie reservations and payments.
+This document provides a detailed and comprehensive design for the "Booky My Show" clone backend. By incorporating best practices and advanced features, the system aims to deliver a robust, scalable, and user-friendly solution for managing movie Bookings and payments.
