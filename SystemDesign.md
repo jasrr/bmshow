@@ -22,7 +22,7 @@ User Reviews and Ratings: Allow users to review and rate movies.
 Latency: The system should respond to user requests within milliseconds to ensure a smooth experience.
 Data Integrity: Maintain accurate and consistent data across all system components.
 Scalability: Design the system to handle increasing numbers of users, movies, and bookinggs without performance degradation.
-Availability: Ensure high availability with minimal downtime, targeting an uptime of 99.9%.
+Availability: Ensure high availability
 Disaster Recovery: Implement backup and recovery procedures to handle data loss or system failures.
 
 # 2. Capacity Estimation
