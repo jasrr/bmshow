@@ -65,7 +65,7 @@ NoSQL Database: Stores unstructured data like reviews and logs.
 
 ##4.2 System Process
 
-User Registration: Users provide personal details, which are stored securely.
+User Singup: Users provide personal details, which are stored securely.
 Movie and Showtime Management: Admins add, update, or remove movies and showtimes.
 Bookings and Payment Processing: Users book tickets and make payments. The system checks availability and confirms Bookings.
 
