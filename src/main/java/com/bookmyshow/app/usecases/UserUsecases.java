@@ -6,6 +6,8 @@ import com.bookmyshow.app.repositories.interfaces.UserRepository;
 import com.bookmyshow.app.services.utils.passwordencoder.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+#line24
+
 @Service
 public class UserUsecases {
     // We're not going to change the password-encoder for different requests/usecases
