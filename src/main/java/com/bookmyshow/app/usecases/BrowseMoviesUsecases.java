@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+#line27
+
 @Service
 public class BrowseMoviesUsecases {
     private final CinemaRepository cinemaRepository;
