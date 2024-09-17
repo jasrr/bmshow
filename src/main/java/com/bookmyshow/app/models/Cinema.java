@@ -9,6 +9,8 @@ import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+#Cinema
+
 @Getter
 @Setter
 @Entity
