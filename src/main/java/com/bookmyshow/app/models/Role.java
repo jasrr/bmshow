@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+#lline26
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
