@@ -2,6 +2,7 @@ package com.bookmyshow.app.repositories.interfaces;
 
 import com.bookmyshow.app.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+#import
 
 import java.util.Optional;
 
