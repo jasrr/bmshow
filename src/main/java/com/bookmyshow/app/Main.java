@@ -26,7 +26,7 @@ public class Main implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
-
+#line44
     @Override
     public void run(String... args) throws Exception {
         Role customerRole = new Role("customer", "allows access to ticket booking");
