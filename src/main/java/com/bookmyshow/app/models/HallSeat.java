@@ -10,6 +10,7 @@ import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Getter
 @Setter
 @Entity
@@ -28,7 +29,7 @@ public class HallSeat extends Auditable {
     public String toString() {
         return "HallSeat{" +
                 "seatLocation='" + seatLocation + '\'' +
-                ", seatType='" + seatType + '\'' +
+                ", seatType='" + seatType + '\'' + #"SeatNumber
                 ", isUnderMaintenance=" + isUnderMaintenance +
                 ", hall=" + hall +
                 ", showSeats=" + showSeats +
