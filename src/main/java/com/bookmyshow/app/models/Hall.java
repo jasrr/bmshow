@@ -27,7 +27,7 @@ public class Hall extends Exposed {
     @Override
     public String toString() {
         return "Hall{" +
-                "hallNumber='" + hallNumber + '\'' +
+                "hallNumber='" + hallNumber + '\'' + #checkhallseat
                 ", seatCount=" + seatCount +
                 ", cinema=" + cinema +
                 ", hallSeats=" + hallSeats +
