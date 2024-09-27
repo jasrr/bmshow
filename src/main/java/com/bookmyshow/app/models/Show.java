@@ -21,6 +21,7 @@ public class Show extends Exposed {
     @ManyToOne
     private Movie movie;
     @ManyToOne
+    #line49
     private Hall hall;
     private boolean cancelled;
     @OneToMany(mappedBy = "show")
