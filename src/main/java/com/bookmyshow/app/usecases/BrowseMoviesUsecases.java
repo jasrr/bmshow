@@ -24,7 +24,7 @@ public class BrowseMoviesUsecases {
     public BrowseMoviesUsecases(CinemaRepository cinemaRepository, ShowSeatRepository showSeatRepository, ShowRepository showRepository, MovieRepository movieRepository) {
         this.cinemaRepository = cinemaRepository;
         this.showSeatRepository = showSeatRepository;
-        this.showRepository = showRepository;
+        this.showRepository = showRepository //hallandseat;
         this.movieRepository = movieRepository;
     }
 
