@@ -36,7 +36,7 @@ public class Customer extends Exposed {
     @Override
     public String toString() {
         return "Customer{" +
-                "fullName='" + fullName + '\'' +
+               "fullName='" + fullName + '\'' + //checkbooking
                 ", phone='" + phone + '\'' +
                 ", city='" + city + '\'' +
                 ", email='" + email + '\'' +
